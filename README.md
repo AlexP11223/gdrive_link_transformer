@@ -13,7 +13,7 @@ Install dependencies by executing `pipenv install`.
 
 Use PyTest to run tests: `pipenv run python -m pytest -v test.py` or in PyCharm.
 
-Use `pipenv run gdrive_direct_link.py` to run the script. 
+Use `pipenv run gdrive_direct_link.py` to run the script when you have a Google Drive sharing link in the clipboard. 
 
 # TODO
 
