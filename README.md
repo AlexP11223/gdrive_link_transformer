@@ -11,7 +11,7 @@ Requirements:
 
 Install dependencies by executing `pipenv install`. 
 
-Use PyTest to run tests: `python -m pytest -v test.py` or in PyCharm.
+Use PyTest to run tests: `pipenv run python -m pytest -v test.py` or in PyCharm.
 
 Use `pipenv run gdrive_direct_link.py` to run the script. 
 
