@@ -1,7 +1,6 @@
+import argparse
+import sys
 from urllib.parse import urlparse, parse_qs
-
-import pyperclip
-from plyer import notification
 
 
 def is_sharing_link(url):
@@ -26,13 +25,31 @@ def convert_to_direct_link(url):
 
 
 def main():
-    content = pyperclip.paste()
-    if is_sharing_link(content):
-        url = convert_to_direct_link(content)
-        pyperclip.copy(url)
-        notification.notify(
-            title='Google Drive link',
-            message='Direct Google Drive link copied to clipboard: ' + url)
+    parser = argparse.ArgumentParser(description='Generate direct Google Drive links from standard sharing links.',
+                                     formatter_class=argparse.RawDescriptionHelpFormatter,
+                                     epilog='''Example:
+    gdrive_direct_link.py https://drive.google.com/file/d/qwe123456/view
+    gdrive_direct_link.py https://drive.google.com/open?id=qwe123456
+    gdrive_direct_link.py # use clipboard''')
+    parser.add_argument('url', nargs='?', default=None)
+
+    args = parser.parse_args()
+
+    if args.url:
+        if not is_sharing_link(args.url):
+            sys.exit(1)
+        converted_url = convert_to_direct_link(args.url)
+        print(converted_url)
+    else:
+        import pyperclip
+        from plyer import notification
+        content = pyperclip.paste()
+        if is_sharing_link(content):
+            converted_url = convert_to_direct_link(content)
+            pyperclip.copy(converted_url)
+            notification.notify(
+                title='Google Drive link',
+                message='Direct Google Drive link copied to clipboard: ' + converted_url)
 
 
 if __name__ == '__main__':

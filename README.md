@@ -2,6 +2,8 @@ Generates direct Google Drive link (`https://drive.google.com/uc?export=download
 
 The script takes the link from the clipboard, checks if it is a Google Drive sharing link and copies direct link to the clipboard.
 
+Also it can be used as a normal CLI app taking the link from the arguments and outputting the result.
+
 # Usage
 
 Requirements:
@@ -15,7 +17,7 @@ For Linux you may also need to install one of the packages listed here https://p
 
 Use PyTest to run tests: `poetry run pytest` or in PyCharm.
 
-Use `poetry run gdrive-direct-link` to run the script when you have a Google Drive sharing link in the clipboard. 
+Use `poetry run gdrive-direct-link` to run the script when you have a Google Drive sharing link in the clipboard, or `poetry run gdrive-direct-link https://drive.google.com/file/d/qwe123456/view`  
 
 # TODO
 
