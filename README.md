@@ -11,6 +11,8 @@ Requirements:
 
 Install dependencies by executing `poetry install`. 
 
+For Linux you may also need to install one of the packages listed here https://pyperclip.readthedocs.io/en/latest/introduction.html#not-implemented-error for clipboard management, such as `sudo apt-get install xclip`.
+
 Use PyTest to run tests: `poetry run pytest` or in PyCharm.
 
 Use `poetry run gdrive-direct-link` to run the script when you have a Google Drive sharing link in the clipboard. 
