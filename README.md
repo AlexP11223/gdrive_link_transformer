@@ -7,13 +7,13 @@ The script takes the link from the clipboard, checks if it is a Google Drive sha
 Requirements:
 
 - Python 3.7+
-- [pipenv](https://pipenv.readthedocs.io/en/latest/)
+- [poetry](https://poetry.eustace.io/docs/)
 
-Install dependencies by executing `pipenv install`. 
+Install dependencies by executing `poetry install`. 
 
-Use PyTest to run tests: `pipenv run python -m pytest -v test.py` or in PyCharm.
+Use PyTest to run tests: `poetry run pytest` or in PyCharm.
 
-Use `pipenv run gdrive_direct_link.py` to run the script when you have a Google Drive sharing link in the clipboard. 
+Use `poetry run gdrive-direct-link` to run the script when you have a Google Drive sharing link in the clipboard. 
 
 # TODO
 

@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "gdrive_link_transformer"
+version = "0.1.0"
+description = "Generate direct Google Drive link from standard sharing links"
+authors = ["Alex P <alex.pantec@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+plyer = "^1.4"
+pyperclip = "^1.7"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.1"
+
+[tool.poetry.scripts]
+gdrive-direct-link = "gdrive_link_transformer.gdrive_direct_link:main"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
