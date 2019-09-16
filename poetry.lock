@@ -176,6 +176,9 @@ version = "0.6.0"
 [package.dependencies]
 more-itertools = "*"
 
+[extras]
+dbus = ["dbus-python"]
+
 [metadata]
 content-hash = "f9f5dbd5b19057aa4349904a60dc91229d86a623945c443df578bd97ea85f3ed"
 python-versions = "^3.7"

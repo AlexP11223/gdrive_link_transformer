@@ -22,3 +22,6 @@ gdrive-direct-link = "gdrive_link_transformer.gdrive_direct_link:main"
 [build-system]
 requires = ["poetry>=0.12"]
 build-backend = "poetry.masonry.api"
+
+[tool.poetry.extras]
+dbus = ["dbus-python"]

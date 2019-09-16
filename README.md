@@ -19,7 +19,7 @@ Requirements:
 - Python 3.7+
 - [poetry](https://poetry.eustace.io/docs/)
 
-Install dependencies by executing `poetry install`. 
+Install dependencies by executing `poetry install`. For Linux use `poetry install --extras dbus` (unless you need just the CLI mode).
 
 Use PyTest to run tests: `poetry run pytest` or in PyCharm.
 
