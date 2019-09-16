@@ -1,10 +1,18 @@
-Generates direct Google Drive link (`https://drive.google.com/uc?export=download&id=<ID>`) from standard sharing links (`https://drive.google.com/file/d/<ID>/view` or `https://drive.google.com/open?id=<ID>`).
+Generates direct Google Drive links (`https://drive.google.com/uc?export=download&id=<ID>`) from standard sharing links (`https://drive.google.com/file/d/<ID>/view` or `https://drive.google.com/open?id=<ID>`).
 
 The script takes the link from the clipboard, checks if it is a Google Drive sharing link and copies direct link to the clipboard.
 
 Also it can be used as a normal CLI app taking the link from the arguments and outputting the result.
 
 # Usage
+
+Download the binaries for your OS from the [Releases](https://github.com/AlexP11223/gdrive_link_transformer/releases) page or see the section below to run from source code.
+
+For Linux you may need to install one of the packages listed here https://pyperclip.readthedocs.io/en/latest/introduction.html#not-implemented-error for clipboard management, such as `sudo apt-get install xclip`.
+
+Run `gdrive-direct-link` (`gdrive-direct-link.exe` for Windows) when you have a Google Drive sharing link in the clipboard, or `gdrive-direct-link https://drive.google.com/file/d/qwe123456/view` in terminal.
+
+# Running from source code
 
 Requirements:
 
@@ -13,12 +21,11 @@ Requirements:
 
 Install dependencies by executing `poetry install`. 
 
-For Linux you may also need to install one of the packages listed here https://pyperclip.readthedocs.io/en/latest/introduction.html#not-implemented-error for clipboard management, such as `sudo apt-get install xclip`.
-
 Use PyTest to run tests: `poetry run pytest` or in PyCharm.
 
-Use `poetry run gdrive-direct-link` to run the script when you have a Google Drive sharing link in the clipboard, or `poetry run gdrive-direct-link https://drive.google.com/file/d/qwe123456/view`  
+Use `poetry run gdrive-direct-link` to run the script as described in the Usage section.
 
-# TODO
+## Building binary
 
-- Create binaries.  
+Run `poetry run pyinstaller gdrive_direct_link.spec`, the result will be in the `dist` dir: `dist/gdrive_direct_link/gdrive_direct_link`.
+
