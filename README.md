@@ -1,6 +1,6 @@
 Generates direct Google Drive links (`https://drive.google.com/uc?export=download&id=<ID>`) from standard sharing links (`https://drive.google.com/file/d/<ID>/view` or `https://drive.google.com/open?id=<ID>`).
 
-The script takes the link from the clipboard, checks if it is a Google Drive sharing link and copies direct link to the clipboard.
+The script takes the link from the clipboard, checks if it is a Google Drive sharing link and copies direct link to the clipboard, shows notification.
 
 Also it can be used as a normal CLI app taking the link from the arguments and outputting the result.
 
