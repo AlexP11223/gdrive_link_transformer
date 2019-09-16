@@ -2,7 +2,13 @@ Generates direct Google Drive links (`https://drive.google.com/uc?export=downloa
 
 The script takes the link from the clipboard, checks if it is a Google Drive sharing link and copies direct link to the clipboard, shows notification.
 
+![](https://i.imgur.com/uRtRyNF.png)
+
 Also it can be used as a normal CLI app taking the link from the arguments and outputting the result.
+
+![](https://i.imgur.com/cq7kx74.png)
+
+Should work on Windows, Linux and (not tested) Mac OS.
 
 # Usage
 
@@ -30,4 +36,3 @@ Use `poetry run gdrive-direct-link` to run the script as described in the Usage 
 Run `poetry run pyinstaller gdrive_direct_link.spec`
 
 The result will be in the `dist` dir: `dist/gdrive_direct_link/gdrive_direct_link`
-
