@@ -9,8 +9,9 @@ license = "MIT"
 python = "^3.7"
 plyer = "^1.4"
 pyperclip = "^1.7"
-dbus-python = "^1.2"
 pyinstaller = "^3.5"
+
+dbus-python = { version = "^1.2", optional = true }
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.1"

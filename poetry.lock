@@ -35,7 +35,8 @@ version = "0.4.1"
 category = "main"
 description = "Python bindings for libdbus"
 name = "dbus-python"
-optional = false
+optional = true
+marker = "sys_platform != \"win32\""
 python-versions = "*"
 version = "1.2.10"
 
