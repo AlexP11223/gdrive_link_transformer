@@ -5,7 +5,7 @@ block_cipher = None
 
 a = Analysis(['gdrive_link_transformer/gdrive_direct_link.py'],
              binaries=[],
-             datas=[],
+             datas=[('resources', './resources')],
              hiddenimports=['plyer.platforms.win.notification', 'plyer.platforms.linux.notification', 'plyer.platforms.macosx.notification'],
              hookspath=[],
              runtime_hooks=[],
@@ -25,6 +25,7 @@ exe = EXE(pyz,
           bootloader_ignore_signals=False,
           strip=False,
           upx=True,
+		  icon='resources/icon.ico',
           console=True )
 coll = COLLECT(exe,
                a.binaries,

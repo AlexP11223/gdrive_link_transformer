@@ -1,5 +1,6 @@
 import argparse
 import sys
+import os
 from urllib.parse import urlparse, parse_qs
 
 
@@ -23,6 +24,13 @@ def convert_to_direct_link(url):
 
     return None
 
+def resource_dir():
+    RESOURCE_DIR_NAME = 'resources'
+    file_dir_path = os.path.dirname(os.path.realpath(__file__))
+    if os.path.isdir(os.path.join(file_dir_path, RESOURCE_DIR_NAME)):
+        return os.path.join(file_dir_path, RESOURCE_DIR_NAME)
+    return os.path.normpath(os.path.join(file_dir_path, '..', RESOURCE_DIR_NAME))
+
 
 def main():
     parser = argparse.ArgumentParser(description='Generate direct Google Drive links from standard sharing links.',
@@ -43,12 +51,14 @@ def main():
     else:
         import pyperclip
         from plyer import notification
+        from plyer.utils import platform
         content = pyperclip.paste()
         if is_sharing_link(content):
             converted_url = convert_to_direct_link(content)
             pyperclip.copy(converted_url)
             notification.notify(
-                title='Google Drive link',
+                title='Google Drive direct link',
+                app_icon=os.path.join(resource_dir(), 'icon') + '.ico' if platform == "win" else '.png',
                 message='Direct Google Drive link copied to clipboard: ' + converted_url)
 
 
