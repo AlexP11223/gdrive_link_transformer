@@ -33,6 +33,6 @@ Use `poetry run gdrive-direct-link` to run the script as described in the Usage 
 
 ## Building binary
 
-Run `poetry run pyinstaller gdrive_direct_link.spec`
+Run `poetry run pyinstaller gdrive-direct-link.spec`
 
-The result will be in the `dist` dir: `dist/gdrive_direct_link/gdrive_direct_link`
+The result will be in the `dist` dir: `dist/gdrive-direct-link/gdrive-direct-link`
