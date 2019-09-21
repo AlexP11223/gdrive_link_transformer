@@ -2,11 +2,11 @@ Generates direct Google Drive links (`https://drive.google.com/uc?export=downloa
 
 The script takes the link from the clipboard, checks if it is a Google Drive sharing link and copies direct link to the clipboard, shows notification.
 
-![](https://i.imgur.com/uRtRyNF.png)
+![Windows 10 screenshot](https://i.imgur.com/MiBGXFO.png)
 
 Also it can be used as a normal CLI app taking the link from the arguments and outputting the result.
 
-![](https://i.imgur.com/cq7kx74.png)
+![Terminal screenshot](https://i.imgur.com/cq7kx74.png)
 
 Should work on Windows, Linux and (not tested) Mac OS.
 
