@@ -58,7 +58,7 @@ def main():
             pyperclip.copy(converted_url)
             notification.notify(
                 title='Google Drive direct link',
-                app_icon=os.path.join(resource_dir(), 'icon') + '.ico' if platform == "win" else '.png',
+                app_icon=os.path.join(resource_dir(), 'icon') + ('.ico' if platform == "win" else '.png'),
                 message='Direct Google Drive link copied to clipboard: ' + converted_url)
 
 
