@@ -4,6 +4,8 @@ The script takes the link from the clipboard, checks if it is a Google Drive sha
 
 ![Windows 10 screenshot](https://i.imgur.com/MiBGXFO.png)
 
+![Pop_OS 19.10 screenshot](https://i.imgur.com/Mvhy85a.png)
+
 Also it can be used as a normal CLI app taking the link from the arguments and outputting the result.
 
 ![Terminal screenshot](https://i.imgur.com/cq7kx74.png)
